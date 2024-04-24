@@ -35,7 +35,8 @@ const LeafletRoutingMachine = () => {
         addWaypoints: false,
         draggableWaypoints: false,
         fitSelectedRoutes: true,
-        showAlternatives: true,
+        showAlternatives: false,
+        routeControl: false // Prevent the automatic addition of the control panel
       })
         .on("routesfound", function (e) {
           e.routes[0].coordinates.forEach((c, i) => {
